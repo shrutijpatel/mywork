@@ -1,13 +1,15 @@
-import React from 'react';
+import React,{Fragment} from 'react';
+
 function Footer(props){
-    console.log("In Footer>>", props)
+    console.log("in footer>>>",props)
     return(
-        <React.Fragment>
+        <Fragment>
             <hr/>
             <center>
                 <h3>&copy; Shruti Patel {props.year}</h3>
             </center>
-        </React.Fragment>
+        </Fragment>
     )
 }
-export default Footer
+
+export default Footer;

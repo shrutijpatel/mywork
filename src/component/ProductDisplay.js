@@ -1,10 +1,12 @@
 import React from 'react';
 import './ProductDisplay.css';
-const Product = (props) => {
-    console.log("IN Products>>>",props)
-    const renderProduct = props.prodData.map((data) => {
+
+const Product = (props) =>{
+    console.log("in products>>>",props)
+
+    const renderProduct = props.prodData.map((data,index) => {
         return(
-            <div className="card" key={data.id}>
+            <div className="card" key={index}>
                 <img src={data.image} alt={data.name}/>
                 <hr/>
                 <div>
@@ -15,12 +17,16 @@ const Product = (props) => {
             </div>
         )
     })
+
+    // console.log(">>",renderProduct)
     return(
         <>
             <div className="main">
-                {renderProduct}
+               {renderProduct}
             </div>
         </>
     )
 }
+
+
 export default Product
